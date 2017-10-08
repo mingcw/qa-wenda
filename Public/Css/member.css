@@ -1,0 +1,312 @@
+#center {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 10px auto;
+}
+/**********左侧**********/
+#left {
+    width: 220px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+}
+#left .userinfo {
+    width: 198px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    padding: 10px 10px 0;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+#left .userinfo dl {
+    width: 198px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #F2E5AA;
+    text-align: left;
+}
+#left .userinfo dl dt {
+    float: left;
+    width: 48px;
+    height: 58px;
+    margin-right: 20px;
+    padding: 5px 0;
+}
+#left .userinfo dl dd {
+    width: 128px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    font-size: 12px;
+}
+#left .userinfo dl .username a{
+    color: #333333;
+    font-weight: 700;
+    text-decoration: none;
+}
+#left .userinfo table {
+    width: 198px;
+    height: 28px;
+    margin: 5px 0;
+}
+#left .userinfo table td {
+    text-align: center;
+    border-right: 1px dotted #F2E5AA;
+}
+#left .userinfo table tr .last {
+    border: none;
+}
+#left .userinfo table td a {
+    color: #FF6600;
+}
+#left ul {
+    width: 220px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #fefefe;
+    border-bottom: 1px solid #ccc;
+}
+#left ul li {
+    position: relative;
+    width: 218px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    text-align: left;
+    text-indent: 4em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+#left ul li .fa{
+    position: absolute;
+    left: -24px;
+    top: 10px;
+}
+#left ul .cur {
+    width: 219px;
+    height: 34px;
+    line-height: 34px;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #333333;
+    color:#efefef;
+}
+#left ul .cur a{
+    color: #efefef;
+}
+
+/**********右侧**********/
+#right {
+    width: 926px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    border: 1px solid #ccc;
+    background: #fefefe;
+    padding: 10px 20px;
+    text-align: left;
+}
+#right .title {
+    width: 925px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+#right .title .fa{
+    position: relative;
+    top: 1px;
+}
+#right .property {
+    width: 925px;
+    height: 30px;
+}
+#right .property li {
+    float: left;
+    text-align: left;
+    font-size: 14px;
+    width:150px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+#right .property li span {
+    color: #FF6600;
+    font-weight: bold;
+}
+#right .list {
+    width: 925px;
+    height: auto;
+    overflow: hidden;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+#right .list p{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #EDEDED;
+}
+#right .list p span{
+    font-weight: bold;
+    float: left;
+    border-bottom: 1px solid #9c27b0;
+}
+#right .list p span b {
+    font-weight: normal;
+    color: #888888;
+}
+#right .list p a{
+    float: right;
+    font-size: 12px;
+}
+#right table {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#right table tr {
+    border-bottom: 1px dotted #F0F0F0;
+}
+#right table tr th {
+    padding: 10px 0;
+    text-align: center;
+}
+#right table tr td {
+    padding: 10px 0;
+    text-align: center;
+    width: 100px;
+    color: #888888;
+}
+#right table tr .t1 {
+    width: 528px;
+    text-align: left;
+    font-size: 14px;
+}
+#right table tr .t3 {
+    text-align: right;
+}
+#right table tr .cons {
+    font-family: SimSun;
+    font-size: 14px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#right table tr .cate{
+    background: #E6E9ED;
+    border-radius: 5px;
+    color: #000;
+    padding: 4px 10px;
+    text-decoration: none;
+    border: 1px solid #E6E9ED;
+}
+#right table .page {
+    border: none;
+}
+#right table .page td{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#right .ask-filter {
+    width: 925px;
+    height: 36px;
+    border-bottom: 1px solid #E0E0E0;
+    margin: 10px 0;
+}
+#right .ask-filter li {
+    float: left;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+#right .ask-filter .cur {
+    width: 98px;
+    height: 35px;
+    line-height: 34px;
+    border: 1px solid #E0E0E0;
+    border-bottom-color: #fff;
+    color: #333333;
+    font-weight: bold;
+    cursor: default;
+}
+#right .lv-info {
+    width: 710px;
+    height: 36px;
+    line-height: 36px;
+    text-align: left;
+    font-size: 14px;
+}
+#right .lv-info span {
+    color: #9c27b0;
+}
+#right .lv-rule{
+    height: auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+#right .lv-rule p {
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#right .lv-rule p span{
+    display: block;
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 1px solid #9c27b0;
+    font-weight: bold;
+    font-size: 14px;
+}
+#right .lv-exp {
+    margin: 20px 0;
+}
+#right .lv-exp th{
+    padding: 5px 0;
+    border: 1px solid #E0E0E0;
+    background: #F8F8F8;
+}
+#right .lv-exp td {
+    padding: 5px 0;
+    border: 1px solid #E0E0E0;
+    color: #333333;
+}
+#right .lv-exp td span{
+    color: #FF6600;
+}
+#right .lv-exp .cur{
+    background: #FFFEF1;
+    font-weight: bold;
+}
+#right .myinfo{
+    padding-top: 20px;
+    font-weight: bold;
+}
+#right .myinfo img{
+    padding: 20px 100px;
+}
+#right .myinfo input{
+    max-width: 200px;
+    overflow: hidden;
+}
+#right .myinfo .upload-btn{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    background-color: #41B80E;
+}
+#right .myinfo .upload-btn:hover{
+    cursor: pointer;
+    background-color: #78ef45;
+}

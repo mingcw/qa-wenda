@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+	<style type="text/css">
+		.open{
+			display: block;
+			width: 15px;
+			height: 15px;
+			line-height: 15px;
+			text-align: center;
+			border: 1px solid #ccc;
+			font-weight: bold;
+			color: #359806;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+
+			// 隐藏子级分类，无视前２行用:gt(1)
+			$('tr[pid!="0"]:gt(1)').hide();
+
+			// 子级分类的展开和隐藏
+			$('.open').bind('click', function(event){
+				var id = $(this).parents('tr').attr('id');
+				$('tr[pid=' + id + ']').toggle();
+				$(this).html($(this).html() == '+' ? '-' : '+');
+			});
+
+			// 删除提示
+			$('.del').click(function(){
+				return confirm('确定要删除吗？');
+			});
+		})
+	</script>
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<th colspan="4" align="right">问题分类列表</th>
+		</tr>
+		<tr>
+			<th width="5%">展开</th>
+			<th width='8%'>ID</th>
+			<th align="left">分类名称</th>
+			<th width="36%">操作</th>
+		</tr>
+		<foreach name='cate' item='v'>
+			<tr align="center" id="{$v.id}" pid="{$v.pid}">
+				<td><span class='open'>+</span></td>
+				<td>{$v.id}</td>
+				<td align="left">{:str_repeat('&nbsp;&nbsp;', $v['level'] - 1)}<if condition='$v["level"] gt 1' >→</if>{$v.name}</td>
+				<td>
+					<a href="{:U('addChild', array('pid' => $v['id']))}" class="btn1">添加子分类</a>
+					<a href="{:U('edit', array('id' => $v['id']))}" class="btn2">修改</a>
+					<a href="{:U('del', array('id' => $v['id']))}" class="btn3 del">删除</a>
+				</td>
+			</tr>
+		</foreach>
+	</table>
+</body>
+</html>

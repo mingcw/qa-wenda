@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{$Think.config.web_name} - 后台首页</title>
+	<meta name="keywords" content="{$Think.config.web_keywords}"/>
+	<meta name="description" content="{$Think.config.web_description}"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/index.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+	<base target="iframe"/>
+</head>
+<body>
+	<div class="container">
+		<!-- 页头 -->
+		<header>
+			<div id="logo">
+				<a href="__APP__" target="_self" id="logo">{$Think.config.web_name}-后台中心</a>
+			</div>
+			<div class="menu">
+				<a href="{:U('Ask/index')}">查看问题</a>
+				<a href="{:U('Answer/index')}">查看回答</a>
+				<a href="#">回答之星</a>
+				<a href="{:U('Category/index')}">所有分类</a>
+				<a href="{:U('Reward/index')}">奖励规则</a>
+				<a href="{:U('User/index')}">网站用户</a>
+				<a href="{:U('System/index')}">系统设置</a>
+				<a href="__APP__" target="_self">查看首页</a>
+			</div>
+			<div class="exit">
+				<a href="{:U('logOut')}" target="_self">退出登录</a>
+				<a href="#" target="_blank">获得帮助</a>
+				<a href="#" target="_blank">论坛求助</a>
+			</div>
+		</header>
+		<!-- 左侧导航栏 -->
+		<nav id="nav">
+			<dl>
+				<dt>问题管理</dt>
+				<dd><a href="{:U('Ask/index')}">所有问题</a></dd>
+				<dd><a href="{:U('Ask/index', array('type' => 1))}">待解决问题</a></dd>
+				<dd><a href="{:U('Ask/index', array('type' => 2))}">已解决问题</a></dd>
+				<dd><a href="{:U('Ask/index', array('type' => 3))}">零回答问题</a></dd>
+			</dl>
+			<dl>
+				<dt>回答管理</dt>
+				<dd><a href="{:U('Answer/index')}">所有回答</a></dd>
+				<dd><a href="{:U('Answer/index', array('type' => 1))}">未采纳回答</a></dd>
+				<dd><a href="{:U('Answer/index', array('type' => 2))}">已采纳回答</a></dd>
+			</dl>
+			<dl>
+				<dt>问题分类管理</dt>
+				<dd><a href="{:U('Category/index')}">问题分类列表</a></dd>
+				<dd><a href="{:U('Category/addTop')}">添加顶级分类</a></dd>
+			</dl>
+			<dl>
+				<dt>奖励管理</dt>
+				<dd><a href="{:U('Reward/index')}">金币奖励规则</a></dd>
+				<dd><a href="{:U('Reward/level')}">经验级别规则</a></dd>
+			</dl>
+			<dl>
+				<dt>用户管理</dt>
+				<dd><a href="{:U('User/index')}">用户列表</a></dd>
+				<dd><a href="{:U('User/add')}">添加新用户</a></dd>
+				<dd><a href="{:U('User/index', array('type' => 1))}">已禁止用户</a></dd>
+			</dl>
+			<dl>
+				<dt>系统设置</dt>
+				<dd><a href="{:U('System/index')}">网站设置</a></dd>
+			</dl>
+		</nav>
+		<!-- 主内容 -->
+		<div class="main" style="display: block; width: 1000px; height: 900px;">
+			<iframe name="iframe" frameborder="0" src="{:U('copy')}"></iframe>
+		</div>
+		<!-- 页脚 -->
+		<footer>
+			<p>{$Think.config.web_copy}</p>
+			<p>{$Think.config.web_record}</p>
+		</footer>
+	</div>
+</body>
+</html>

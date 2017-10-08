@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+	<script type="text/javascript">
+		window.onload = function (){
+			$('.del').click(function (){
+				return confirm('确认删除吗？');
+			});
+		};
+	</script>
+</head>
+<body>
+	<table class="table">
+		<tr>
+			<th colspan="5" align="right">
+			<switch name='type'>
+				<case value='1'>未采纳回答列表</case>
+				<case value='2'>已采纳回答列表</case>
+				<default />所有回答列表
+			</switch>
+			</th>
+		</tr>
+		<tr align="center">
+			<th>Ih</th>
+			<th align="left">问题内容</th>
+			<th>是否被采纳</th>
+			<th>回答时间</th>
+			<th>操作</th>
+		</tr>
+		<foreach name='answer' item='v'>
+			<tr align="center">
+				<td>{$v.id}</td>
+				<td align='left'>{$v.content}</td>
+				<td><if condition='$v["adopt"]'>是<else />否</if></td>
+				<td>{$v.time|date='Y-m-d H:i', ###}</td>
+				<td>
+					<a href="{:U('delAns', array('id' => $v['id']))}" class="del btn3">删除</a>
+				</td>
+			</tr>
+		</foreach>
+		<tr>
+			<td colspan="5" align="center">{$page}</td>
+		</tr>
+	</table>
+</body>
+</html>

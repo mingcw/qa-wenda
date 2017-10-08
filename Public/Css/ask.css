@@ -1,0 +1,199 @@
+#location{
+	width:1200px;
+	margin: 0 auto;
+	text-align:left;
+}
+#center{
+	width: 1200px;
+	height: auto;
+	overflow: hidden;
+	margin: 10px auto;
+}
+#center .send{
+	width: 744px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+#center .send .title{
+	height: 34px;
+	line-height: 34px;
+	padding: 10px 0;
+}
+#center .send .title .left {
+	text-align: left;
+	height: 34px;
+	line-height: 34px;
+	font-family: 'Microsoft YaHei';
+	font-size: 22px;
+	font-weight: 700;
+	float: left;
+}
+#center .send .title .right{
+	text-align: right;
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #333333;
+	float: right;
+}
+#center .send .title .right span{
+	color: #9c27b0;
+	font-size: 20px;
+}
+#center .send .cons{
+	width: 720px;
+	height: 80px;
+	padding: 10px;
+	border: 1px solid #ACACAC;
+	border-bottom: none;
+	-moz-border-colors: none;
+	box-shadow: 1px 1px 3px #CCCCCC inset;
+}
+#center .send .cons textarea{
+	width: 100%;
+	%: 8px
+	border: none;
+	height: 100%;
+	resize:none;
+	font-size: 14px;
+	border: none;
+}
+#center .send .reward {
+	width: 740px;
+	height: 40px;
+	border: 1px solid #ACACAC;
+	border-top: none;
+}
+#center .send .reward ul {
+	width: 260px;
+	height: 30px;
+	margin-top: 10px;
+	float: right;
+}
+#center .send .reward ul li {
+	float: left;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #888888;
+}
+#center .send .reward ul li span {
+	color: #FF6701;
+}
+#center .send .reward .cate-btn {
+	display: block;
+	float: left;
+	width: 80px;
+	height: 22px;
+	line-height: 22px;
+	border: 1px solid #333;
+	border-radius: 4px;
+	margin: 10px 0 0 5px;
+	cursor: pointer;
+	color: #efefef;
+	background: #333;
+	font-size: 12px;
+}
+#center .send .send-btn {
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	float: right;
+	border: 1px solid #9c27b0;
+	border-radius: 4px;
+	cursor: pointer;
+	background: #9c27b0;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 10px;
+	letter-spacing: 2px;
+}
+#center .send .send-btn:hover {
+	background:#c920e5;
+}
+#category {
+	width: 491px;
+	height: 430px;
+	position: absolute;
+	z-index: 999;
+	display: none;
+	background: #fff;
+}
+#category .title {
+	height: 30px;
+	padding: 10px 0;
+	line-height: 30px;
+	border-bottom: 1px solid #E0E0E0;
+	background: #333;
+	color: #efefef;
+}
+#category .title span {
+	display: block;
+	padding-left: 10px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+#category .title .close-window {
+	display: block;
+	float: right;
+	width: 25px;
+	height: 28px;
+	margin-top: 1px;
+	margin-right: 10px;
+}
+#category .title .close-window .fa{
+	font-size:24px;
+	color: #efefef;
+}
+#category .title .close-window:hover{
+	background-position: -25px 0;
+}
+#category .sel {
+	width: 480px;
+	height: 320px;
+}
+#category .sel p {
+	clear: both;
+	width: 480px;
+	height: 48px;
+	line-height: 48px;
+	text-align: left;
+	text-indent: 10px;
+}
+#category .sel select {
+	width: 150px;
+	height: 260px;
+	float: left;
+	margin-left: 10px;
+}
+#category .sel select option {
+	font-size: 14px;
+	padding: 2px;
+}
+#category .bottom{
+	height: 50px;
+	background:#F8F8F8;
+}
+#category .bottom span {
+	display: block;
+	float: right;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #333;
+	background: #333;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-right: 10px;
+}

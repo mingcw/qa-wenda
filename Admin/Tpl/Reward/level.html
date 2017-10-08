@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+</head>
+<body>
+	<form action="{:U('edit')}" method="post">
+		<table class="table">
+			<tr>
+				<th colspan="10" align="right">经验级别规则设置</th>
+			</tr>
+			<tr>
+				<td align="right">登录：</td>
+				<td colspan="9">
+					+ <input type="text" name="lv_login" value="{$Think.config.lv_login}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">提问：</td>
+				<td colspan="9">
+					+ <input type="text" name="lv_ask" value="{$Think.config.lv_ask}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">回答：</td>
+				<td colspan="9">
+					+ <input type="text" name="lv_answer" value="{$Think.config.lv_answer}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">采纳：</td>
+				<td colspan="9">
+					+ <input type="text" name="lv_adopt" value="{$Think.config.lv_adopt}" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10">各等级所需经验：</td>
+			</tr>
+			<tr>
+				<td align="right">LV1:</td>
+				<td>
+					<input type="text" name="lv_lv1" value="{$Think.config.lv_lv1}" class="len100">
+				</td>
+				<td align="right">LV2:</td>
+				<td>
+					<input type="text" name="lv_lv2" value="{$Think.config.lv_lv2}" class="len100">
+				</td>
+				<td align="right">LV3:</td>
+				<td>
+					<input type="text" name="lv_lv3" value="{$Think.config.lv_lv3}" class="len100">
+				</td>
+				<td align="right">LV4:</td>
+				<td>
+					<input type="text" name="lv_lv4" value="{$Think.config.lv_lv4}" class="len100">
+				</td>
+				<td align="right">LV5:</td>
+				<td>
+					<input type="text" name="lv_lv5" value="{$Think.config.lv_lv5}" class="len100">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">LV6:</td>
+				<td>
+					<input type="text" name="lv_lv6" value="{$Think.config.lv_lv6}" class="len100">
+				</td>
+				<td align="right">LV7:</td>
+				<td>
+					<input type="text" name="lv_lv7" value="{$Think.config.lv_lv7}" class="len100">
+				</td>
+				<td align="right">LV8:</td>
+				<td>
+					<input type="text" name="lv_lv8" value="{$Think.config.lv_lv8}" class="len100">
+				</td>
+				<td align="right">LV9:</td>
+				<td>
+					<input type="text" name="lv_lv9" value="{$Think.config.lv_lv9}" class="len100">
+				</td>
+				<td align="right">LV10:</td>
+				<td>
+					<input type="text" name="lv_lv10" value="{$Think.config.lv_lv10}" class="len100">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">LV11:</td>
+				<td>
+					<input type="text" name="lv_lv11" value="{$Think.config.lv_lv11}" class="len100">
+				</td>
+				<td align="right">LV12:</td>
+				<td>
+					<input type="text" name="lv_lv12" value="{$Think.config.lv_lv12}" class="len100">
+				</td>
+				<td align="right">LV13:</td>
+				<td>
+					<input type="text" name="lv_lv13" value="{$Think.config.lv_lv13}" class="len100">
+				</td>
+				<td align="right">LV14:</td>
+				<td>
+					<input type="text" name="lv_lv14" value="{$Think.config.lv_lv14}" class="len100">
+				</td>
+				<td align="right">LV15:</td>
+				<td>
+					<input type="text" name="lv_lv15" value="{$Think.config.lv_lv15}" class="len100">
+				</td>
+			</tr>
+			<tr>
+				<td align="right">LV16:</td>
+				<td>
+					<input type="text" name="lv_lv16" value="{$Think.config.lv_lv16}" class="len100">
+				</td>
+				<td align="right">LV17:</td>
+				<td>
+					<input type="text" name="lv_lv17" value="{$Think.config.lv_lv17}" class="len100">
+				</td>
+				<td align="right">LV18:</td>
+				<td>
+					<input type="text" name="lv_lv18" value="{$Think.config.lv_lv18}" class="len100">
+				</td>
+				<td align="right">LV19:</td>
+				<td>
+					<input type="text" name="lv_lv19" value="{$Think.config.lv_lv19}" class="len100">
+				</td>
+				<td align="right">LV20:</td>
+				<td>
+					<input type="text" name="lv_lv20" value="{$Think.config.lv_lv20}" class="len100">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="10" align="center">
+					<input type="submit" value="保存修改" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

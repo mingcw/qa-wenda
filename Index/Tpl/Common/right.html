@@ -1,0 +1,99 @@
+<div id='right'>
+	<if condition='!session("uid") OR !session("username")' >
+		<div class='r-login'>
+			<span class='login'><i class="fa fa-user"></i>&nbsp;登录</span>
+			<span class='register'><i class="fa fa-user-plus"></i>&nbsp;注册</span>
+		</div>
+	<else />
+		<userinfo id="session('uid')">
+			<div class='userinfo'>
+				<dl>
+					<dt>
+						<a href="{:U('Member/index', array('id' => $id))}">
+							<img src="{$face}" width='48' height='48'/>
+						</a>
+					</dt>
+					<dd class='username'>
+						<a href="{:U('Member/index', array('id' => $id))}">
+							<b>{$username}</b> <span class="level">lv{$level}</span>
+						</a>
+					</dd>
+					<dd>
+						金币：<a href="" style="color: #888;"><b class='point'>{$point}</b></a>
+					</dd>
+					<dd>经验值：{$exp}</dd>
+				</dl>
+				<table>
+					<tr>
+						<td>回答数</td>
+						<td>采纳率</td>
+						<td class='last'>提问数</td>
+					</tr>
+					<tr>
+						<td><a href="">{$answer}</a></td>
+						<td><a href="">{$adopt}</a></td>
+						<td class='last'><a href="">{$ask}</a></td>
+					</tr>
+				</table>
+				<ul>
+					<li><a href="{:U('Member/myAsk', array('id' => $_GET['id']))}"><i class="fa fa-question"></i> 我提问的</a></li>
+					<li><a href="{:U('Member/myAnswer', array('id' => $_GET['id']))}"><i class="fa fa-user"></i> 我回答的</a></li>
+				</ul>
+			</div>
+		</userinfo>
+	</if>
+
+	<div class='clear'></div>
+
+	<div class='star'>
+		<p class='title'><i class="fa fa-star"></i> 问答之星</p>
+		<span class='star-name'><i class="fa fa-rocket"></i> 本日回答问题最多的人</span>
+		<todayAnsMostUser >
+			<div class='star-info'>
+				<div>
+					<a href="{:U('Member/index', array('id' => $_todayAnsMostUser_star['id']))}" class='star-face'>
+					<img src="<if condition='$_todayAnsMostUser_star["face"]'>__ROOT__/Uploads/Face/{$_todayAnsMostUser_star["face"]}<else />__PUBLIC__/Images/noface.jpg</if>" width='48px' height='48px'/></a>
+					<ul>
+						<li><a href="{:U('Member/index', array('id' => $_todayAnsMostUser_star['id']))}">{$_todayAnsMostUser_star.username}</a></li>
+						<li><span class="level">lv{$_todayAnsMostUser_star.level}</span></li>
+					</ul>
+				</div>
+				<ul class='star-count'>
+					<li>回答数：<span>{$_todayAnsMostUser_star['answer']|default="0"}</span></li>
+					<li>采纳率：<span>{:round($_todayAnsMostUser_star['adopt'] / $_todayAnsMostUser_star['answer'] * 100)}%</span></li>
+				</ul>
+			</div>
+		</todayAnsMostUser>
+		<span class='star-name'><i class="fa fa-fire"></i> 历史回答问题最多的人</span>
+		<historyAnsMostUser >
+			<div class='star-info'>
+				<div>
+					<a href="{:U('Member/index', array('id' => $_historyAnsMostUser_star['id']))}" class='star-face'>
+					<img src="<if condition='$_historyAnsMostUser_star["face"]'>__ROOT__/Uploads/Face/{$_historyAnsMostUser_star["face"]}<else />__PUBLIC__/Images/noface.gif</if>" width='48px' height='48px'/></a>
+					<ul>
+						<li><a href="{:U('Member/index', array('id' => $_historyAnsMostUser_star['id']))}">{$_historyAnsMostUser_star.username}</a></li>
+						<li><span class="level">lv{$_historyAnsMostUser_star.level}</span></li>
+					</ul>
+				</div>
+				<ul class='star-count'>
+					<li>回答数：<span>{$_historyAnsMostUser_star['answer']}</span></li>
+					<li>采纳率：<span>{:round($_historyAnsMostUser_star['adopt'] / $_historyAnsMostUser_star['answer'] * 100)}%</span></li>
+				</ul>
+			</div>
+		</historyAnsMostUser>
+	</div>
+
+	<div class='star-list'>
+		<p class='title'><i class="fa fa-thumbs-up"></i> 问答助人光荣榜</p>
+		<div>
+			<ul class='ul-list'>
+				<honor limit='10'>
+					<li>
+						<i class='rank <if condition="$k lt 3">rank-top3</if>'>{$k+1}</i>
+						<a href="{:U('Member/index', array('id' => $id))}" title="已帮助{$answer}人">{$username}</a>
+					</li>
+				</honor>
+			</ul>
+		</div>
+	</div>
+</div>

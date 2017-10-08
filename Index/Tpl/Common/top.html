@@ -1,0 +1,140 @@
+<div id='top-fixed'>
+	<div id='top-bar'>
+		<ul class="top-bar-left fl">
+			<li class="welcome"><p>小站{$Think.config.web_name}，欢迎您的到来！</p></li>
+		</ul>
+		<ul class='top-bar-right fr'>
+			<if condition='!session("uid") OR !session("username")'>
+				<li><a href="" class='login'>登录</a></li>
+				<li style='color:#eaeaf1'>|</li>
+				<li><a href="" class='register'>注册</a></li>
+			<else/>
+				<li class='userinfo'>
+					欢迎您，<i class="fa fa-user-circle"></i>
+					<a href="{:U('Member/index', array('id' => session('uid')))}" class='uname'>{$Think.session.username}</a>
+				</li>
+				<li style='color:#eaeaf1'>|</li>
+				<li><a href="{:U('Common/logout')}">退出</a></li>
+			</if>
+		</ul>
+	</div>
+
+	<div id='search'>
+		<div class='logo'>
+			<a href="__APP__"><img src="__PUBLIC__/Images/logo.png" alt="{$Think.config.web_name}"></a>
+		</div>
+		<form action="" method=''>
+			<input type="text" name='' class='sech-cons' placeholder="有什么不懂的，你问吧~~">
+			<button type="submit" class='sech-btn'><i class="fa fa-search"></i> 搜一搜</button>
+		</form>
+		<a href="{:U('Ask/index')}" class='ask-btn'><i class="fa fa-question"></i> 我要提问</a>
+	</div>
+</div>
+<div style='height:110px'></div>
+<!----------导航条---------->
+<div id='nav'>
+	<ul class='list'>
+		<li class='nav-sel'><a href="__APP__" class='home'><i class="fa fa-home"></i>&nbsp;问答首页</a></li>
+		<li class='nav-sel ask-cate'>
+			<a href="{:U('List/index')}" class='ask-list'><span>问题分类</span> <i class="fa fa-caret-down"></i></a>
+			<ul class='hidden'>
+				<topcate >
+					<li><a href="{:U('List/index', array('id' => $id))}">{$name}</a></li>
+				</topcate>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<if condition="!isset($_SESSION[C('SESSION_PREFIX')]['uid']) OR !isset($_SESSION[C('SESSION_PREFIX')]['username'])">
+	<script type="text/javascript" src='__PUBLIC__/Js/validate.js'></script>
+	<script type="text/javascript">
+		var control = "__APP__/Common/";
+	</script>
+	<!----------注册框---------->
+	<div id='register' class='hidden'>
+		<div class='reg-title'>
+			<p><i class="fa fa-user"></i> 欢迎注册{$Think.config.web_name}</p>
+			<a href="" title='关闭' class='close-window'><i class="fa fa-times-rectangle"></i></a>
+		</div>
+		<div id='reg-wrap'>
+			<div class='reg-left'>
+				<ul>
+					<li><i class="fa fa-user-plus"></i> <span>账号注册</span></li>
+				</ul>
+				<div class='reg-l-bottom'>
+					已有账号，<a href="" id='login-now'>马上登录</a>
+				</div>
+			</div>
+			<div class='reg-right'>
+				<form action="{:U('Common/register')}" method='post' name='register'>
+					<ul>
+						<li>
+							<label for="reg-account"><i class="fa fa-shield"></i> 账号</label>
+							<input type="text" name='account' id='reg-account'/>
+							<span>7-20个字符：以字母开头的字母、数字或下划线 _</span>
+						</li>
+						<li>
+							<label for="reg-uname"><i class="fa fa-user-circle"></i> 用户名</label>
+							<input type="text" name='username' id='reg-uname'/>
+							<span>2-14个字符：字母、数字或中文</span>
+						</li>
+						<li>
+							<label for="reg-pwd"><i class="fa fa-eye-slash"></i> 密码</label>
+							<input type="password" name='pwd' id='reg-pwd'/>
+							<span>6-20个字符:字母、数字或下划线 _</span>
+						</li>
+						<li>
+							<label for="reg-pwded"><i class="fa fa-eye-slash"></i> 确认密码</label>
+							<input type="password" name='pwded' id='reg-pwded'/>
+							<span>请再次输入密码</span>
+						</li>
+						<li>
+							<label for="reg-verify"><i class="fa fa-random"></i> 验证码</label>
+							<input type="text" name='verify' id='reg-verify'/>
+							<img src="{:U('Common/verify')}" width='99' height='35' alt="验证码" id='verify-img'/>
+							<span>请输入图中的字母或数字，不区分大小写</span>
+						</li>
+						<li class='submit'>
+							<button type="submit" class="submit">立即注册</button>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!----------登录框---------->	
+	<div id='login' class='hidden'>
+		<div class='login-title'>
+			<p><i class="fa fa-user"></i> 欢迎您登录{$Think.config.web_name}</p>
+			<a href="" title='关闭' class='close-window'><i class="fa fa-times-rectangle"></i></a>
+		</div>
+		<div class='login-form'>
+			<span id='login-msg'></span>
+			<form action="{:U('Common/login')}" method='post' name='login'>
+				<ul>
+					<li>
+						<label for="login-acc"><i class="fa fa-user-circle"></i> 账号</label>
+						<input type="text" name='account' class='input' id='login-acc'/>
+					</li>
+					<li>
+						<label for="login-pwd"><i class="fa fa-eye-slash"></i> 密码</label>
+						<input type="password" name='pwd' class='input' id='login-pwd'/>
+					</li>
+					<li class='login-auto'>
+						<label for="auto-login">
+							<input type="checkbox" name='auto' id='auto-login'/>&nbsp;下一次自动登录
+						</label>
+						<a href="" id='regis-now'>注册新账号</a>
+					</li>
+					<li>
+						<button type="submit" value='' id='login-btn'>确认登录</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</if>
+
+<!--背景遮罩--><div id='background' class='hidden'></div>

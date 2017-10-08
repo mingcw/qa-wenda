@@ -1,0 +1,12 @@
+body, p, form, input, a, img, label{margin: 0; padding: 0; }
+body{font-size: 20px; font-family: 'Arial', '宋体'; background: -webkit-linear-gradient(left, #561111, #BCECF6); background: -moz-linear-gradient(left, #561111, #BCECF6); background: -o-linear-gradient(left, #561111, #BCECF6); background: linear-gradient(left, #561111, #BCECF6); }
+.login-wrap{width: 400px; margin: 100px auto 0; padding: 20px 0; background: #f7f9f9; border-radius: 10px; -webkit-box-shadow: 15px 15px 10px #262323; -moz-box-shadow: 15px 15px 10px #262323; -o-box-shadow: 15px 15px 10px #262323; box-shadow: 15px 15px 10px #262323; }
+p{height: 50px; line-height: 50px; font-weight: bolder; text-align: left; }
+p::before{content: ""; display: inline-block; width: 0; height: 0; border: 12px solid; vertical-align: middle; margin-left: 28px; border-color: transparent transparent transparent #FC0975; }
+label{display: block; position: relative; text-align: center; }
+input{width: 320px; height: 40px; line-height: 40px; margin-top: 10px; padding: 3px 10px; font-size: 16px; border-radius: 10px; border: 2px solid #ccc; }
+input:focus{border-color: #93BDE5; outline-style: none; } /* outline-style: none;针对Chrome中input元素获取焦点时，去掉轮廓高亮 */
+#code{width: 213px; }
+#img-code{vertical-align: middle; cursor: pointer; }
+#login{line-height: 20px; width: 345px; background: #4885F0; color: #fff; cursor: pointer; }
+#login:hover{background-color: #48c7f0; }

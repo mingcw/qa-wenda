@@ -1,0 +1,199 @@
+
+/********************左侧********************/
+#left{
+	width: 188px;
+	height: auto;
+	float: left;
+	color: #333333;
+	text-align: left;
+}
+#left .left-title {
+	border : 1px solid #D5D5D5;
+	border-bottom: none;
+	padding: 6px 10px 5px;
+	color: #333;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 4px 12px;
+}
+#left .left-list a {
+	color: #333333;
+}
+#left .left-list .list-l1 {
+	position: relative;
+	margin-top: -1px;
+}
+#left .left-list .list-l1 .list-l1-more{
+	position:absolute;
+	right: 10px;
+	bottom: 12px;
+}
+#left .left-list .list-l1 .list-l1-wrap {
+	border: 1px solid #E0E0E0;
+    padding: 8px 3px 8px 10px;
+    position: relative;
+    _height: 40px;
+    z-index: 1;
+}
+#left .left-list .list-l1 .list-cur {
+	border: 1px solid #333;
+	border-right: #fff;
+	background: #fff;
+	z-index: 3;
+}
+#left .left-list .list-l2 {
+	height: auto;
+	overflow: hidden;
+	padding-top: 5px;
+}
+#left .left-list .list-l2 li {
+	float: left;
+	padding-right: 5px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+}
+#left .left-list .list-l1 .list-more {
+	position: absolute;
+	border: 1px solid #333;
+	top: 0px;
+	left: 187px;
+	width: 230px;
+	height: auto;
+	padding:26px 0px 20px 20px;
+	background : #fff;
+	z-index: 2;
+	font-size: 12px;
+}
+#left .left-list .list-l1 .list-more ul li {
+	float: left;
+	margin: 5px;
+}
+#left .left-list .list-l1 .list-more ul li a{
+	display:inline-block;
+	padding : 1px 4px;
+	_padding : 1px 2px;
+	text-decoration: none;
+}
+#left .left-list .list-l1 .list-more ul li a:hover {
+	background: #b31fcc;
+	color: #eee;
+}
+
+/********************中部********************/
+#center {
+	width: 772px;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+}
+#animate {
+	width: 100%;
+	height: 224px;
+	overflow: hidden;
+	border: 1px solid #e0e0e0;
+}
+#animate .imgs-wrap {
+	height: 190px;
+	position: relative;
+	overflow: hidden;
+}
+#animate .imgs-wrap ul {
+	height: 190px;
+	position: absolute;
+}
+#animate .imgs-wrap ul li {
+	float: left;
+	width: 772px;
+	height: 100%;
+}
+#animate .imgs-wrap ul li img{
+	width: 100%;
+	height: 100%;
+}
+#animate .ani-btn {
+	width: 100%;
+	height: 32px;
+	border-top: 1px solid #e0e0e0;
+}
+#animate .ani-btn li {
+	width: 33%;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+	border-right: 1px solid #e0e0e0;
+	color: #333;
+	cursor: default;
+	position: relative;
+}
+#animate .ani-btn .ani-btn-cur {
+	background: #9c27b0;
+	color: #fff;
+}
+#animate .ani-btn i{
+	display:none;
+	color:#9c27b0;
+}
+#animate .ani-btn .ani-btn-cur i {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: 124px;
+}
+
+/**********问题列表**********/
+#center .answer-list {
+	height: auto;
+	overflow: hidden;
+	margin: 20px 0;
+	text-align: left;
+}
+#center .answer-list dt {
+	height: 38px;
+	border-bottom: 1px solid #ededed;
+}
+#center .answer-list dt span {
+	display: block;
+	padding: 0 10px;
+	margin-bottom: -1px;
+	color: #333;
+	float: left;
+	font-size: 20px;
+	font-weight: 700;
+}
+#center .answer-list dt a {
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	float: right;
+	text-decoration: none;
+	margin-right: 10px;
+	color: #333;
+	font-family: SimSun;
+}
+#center .answer-list dd {
+	height: 28px;
+	line-height: 28px;
+	text-indent: 10px;
+	margin: 5px 0;
+}
+#center .answer-list dd a {
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	float: left;
+}
+#center .answer-list dd a b {
+    color: #e94875;
+}
+#center .answer-list dd span {
+	display: block;
+	height: 28px;
+	line-height: 28px;
+	float: right;
+	color: #88888d;
+	margin-right: 20px;
+}

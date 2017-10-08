@@ -1,0 +1,132 @@
+
+#center {
+	width: 1200px;
+	height: auto;
+	overflow: hidden;
+	margin: 10px auto;
+}
+#left {
+	width: 970px;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	text-align: left;
+}
+#cate-list {
+	height: auto;
+	overflow: hidden;
+	border: 1px solid #E0E0E0;
+	background: url(../Images/list-title.png) repeat-x;
+}
+#cate-list .title {
+	width: 748px;
+	height: 40px;
+	line-height: 40px;
+	color: #888888;
+	background: url(../Images/point.png) no-repeat 13px 29px;
+	text-indent: 2em;
+	font-weight: bold;
+}
+#cate-list ul {
+	height: auto;
+	overflow: hidden;
+	margin-left: 28px;
+	margin-bottom: 20px;
+}
+#cate-list ul li {
+	width: 230px;
+	height: 34px;
+	line-height: 34px;
+	float: left;
+}
+#cate-list ul li a {
+	background: #E6E9ED;
+	border-radius: 5px;
+	color: #000;
+	padding: 4px 10px;
+	text-decoration: none;
+	border: 1px solid #E6E9ED;
+}
+#cate-list ul li a:hover {
+	background: #9c27b0;
+	color:#efefef;
+}
+#answer-list {
+	height: auto;
+	overflow: hidden;
+	border: 1px solid #E0E0E0;
+	margin-top: 10px;
+	background: url(../Images/answer-list.png) repeat-x;
+}
+#answer-list .ans-sel {
+	height: 34px;
+	border-bottom: 1px solid #E0E0E0;
+}
+#answer-list .ans-sel li {
+	float: left;
+	height: 34px;
+	line-height: 34px;
+}
+#answer-list .ans-sel .last{
+	background: none;
+}
+#answer-list .ans-sel .on {
+	background: #fff;
+}
+#answer-list .ans-sel .on a {
+	background: #9c27b0;
+	color: #efefef;
+}
+#answer-list .ans-sel li a{
+	padding: 8px 20px;
+	font-size: 14px;
+}
+#answer-list .ans-sel li a:hover{
+	background: #b31fcc;
+	color:#efefef;
+}
+#answer-list table {
+	height: auto;
+	overflow: hidden;
+	margin: 5px 10px;
+}
+#answer-list table tr {
+	border-bottom: 1px dotted #F0F0F0;
+}
+#answer-list table tr th {
+	padding: 5px 0;
+	text-align: center;
+}
+#answer-list table tr td {
+	padding: 10px 0;
+	text-align: center;
+	width: 100px;
+	color: #888888;
+}
+#answer-list table tr .t1 {
+	width: 730px;
+	text-align: left;
+}
+#answer-list table tr .cons {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#answer-list table tr .cons span{
+	background: #E6E9ED;
+    border-radius: 5px;
+    color: #000;
+    padding: 4px 10px;
+    text-decoration: none;
+    border: 1px solid #E6E9ED;
+}
+#answer-list table tr td a b {
+    color: #e94875;
+}
+#answer-list table .page {
+	border: none;
+}
+#answer-list table .page td{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}

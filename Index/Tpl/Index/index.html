@@ -1,0 +1,89 @@
+<include file='Common:header' />
+	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/index.js'></script>
+</head>
+<body>
+	<include file='Common:top' />
+
+<!--------------------内容主体-------------------->
+	<div class='main'>
+		<div id='left'>
+			<p class='left-title'><i class="fa fa-list-ul"></i>&nbsp;所有问题分类</p>
+			<ul class='left-list'>
+				<foreach name='cate' item='v'>
+					<li class='list-l1'>
+						<i class="fa fa-caret-right list-l1-more"></i>
+						<div class='list-l1-wrap'>
+							<h4><a href="{:U('List/index', array('id' => $v['id']))}">{$v.name}</a></h4>
+							<ul class='list-l2'>
+								<for start='0' end='3' name='i'>
+									<li><a href="{:U('List/index', array('id' => $v['child'][$i]['id']))}">{$v['child'][$i]['name']}</a></li>
+								</for>
+							</ul>
+						</div>
+						<div class='list-more hidden'>
+							<ul>
+								<php>$count = count($v['child'])</php>
+								<for start='3' end='$count' name='i'>
+									<li><a href="{:U('List/index', array('id' => $v['child'][$i]['id']))}">{$v['child'][$i]['name']}</a></li>
+								</for>
+							</ul>
+						</div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+
+		<div id='center'>
+			<div id='animate'>
+				<div class='imgs-wrap'>
+					<ul>
+						<li>
+							<a href=""><img src="__PUBLIC__/Images/animate1.jpg"/></a>
+						</li>
+						<li>
+							<a href=""><img src="__PUBLIC__/Images/animate2.jpg"/></a>
+						</li>
+						<li>
+							<a href=""><img src="__PUBLIC__/Images/animate3.jpg"/></a>
+						</li>
+					</ul>
+				</div>
+				<ul class='ani-btn'>
+					<li class='ani-btn-cur'>体感娱乐<i class="fa fa-caret-up"></i></li>
+					<li>心境<i class="fa fa-caret-up"></i></li>
+					<li style='border:none'>绿意远行<i class="fa fa-caret-up"></i></li>
+				</ul>
+			</div>
+
+			<dl class='answer-list'>
+				<dt>
+					<span class='wait-as'><i class="fa fa-leaf"></i> 待解决问题</span>
+					<a href=''>更多>></a>
+				</dt>
+				<foreach name='waitAsk' item='v'>
+					<dd>
+						<a href="{:U('Show/index', array('id' => $v['id']))}"><i class="fa fa-quora"></i> {$v.content}</a>
+						<span>{$v.answer}&nbsp;回答</span>
+					</dd>
+				</foreach>
+			</dl>
+
+			<dl class='answer-list'>
+				<dt>
+					<span class='reward-as'><i class="fa fa-dollar"></i> 高分悬赏问题</span>
+					<a href=''>更多>></a>
+				</dt>
+				<foreach name='rewardAsk' item='v'>
+					<dd>
+						<a href="{:U('Show/index', array('id' => $v['id']))}"><b><i class="fa fa-rmb"></i>{$v.reward}</b> {$v.content}</a>
+						<span>{$v.answer}&nbsp;回答</span>
+					</dd>
+				</foreach>
+			</dl>
+		</div>
+
+		<include file='Common:right' />
+	</div>
+<!--------------------内容主体结束-------------------->
+<include file='Common:bottom' />

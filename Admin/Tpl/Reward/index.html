@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+</head>
+<body>
+	<form action="{:U('Reward/edit')}" method="post" >
+		<table class="table">
+			<tr>
+				<th colspan="3" align="right">金币奖励规则设置</th>
+			</tr>
+			<tr>
+				<td width="27%" align="right">回答：</td>
+				<td width="9%" align="right">+</td>
+				<td>
+					<input type="text" name="answer" maxlength="10" autocomplete="off" autofocus="on" value="{$Think.config.answer}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">回答被采纳：</td>
+				<td align="right">+</td>
+				<td>
+					<input type="text" name="adopt" maxlength="10" autocomplete="off" value="{$Think.config.adopt}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">回答被删除：</td>
+				<td align="right">-</td>
+				<td>
+					<input type="text" name="del_answer" maxlength="10" autocomplete="off" value="{$Think.config.del_answer}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">提问被删除：</td>
+				<td align="right">-</td>
+				<td>
+					<input type="text" name="del_ask" maxlength="10" autocomplete="off" value="{$Think.config.del_ask}" />
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2" align="right">采纳回答被删除：</td>
+				<td align="right">提问者：-</td>
+				<td>
+					<input type="text" name="del_adopt_ask" value="{$Think.config.del_adopt_ask}" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">回答者：-</td>
+				<td>
+					<input type="text" name="del_adopt_answer" value="{$Think.config.del_adopt_answer}" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center">
+					<input type="submit" value="保存修改">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

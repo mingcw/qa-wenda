@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/public.css">
+	<script type="text/javascript" src="__PUBLIC__/Js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Js/public.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			$('form[name="add"]').submit(function(){
+
+				var pwd = $('input[name="pwd"]').val().trim();
+				var pwded = $('input[name="pwded"]').val().trim();
+
+				if(!$('input[name="account"]').val().trim()
+					|| !$('input[name="username"]').val().trim()
+					|| !pwd
+					|| !pwded){
+					return false;
+				}
+
+				if(pwd != pwded){
+					alert('两次密码不一致');
+					return false;
+				}
+			});
+		};
+	</script>
+</head>
+<body>
+	<form action="{:U('addHandle')}" method="post" name="add">
+		<table class="table">
+			<tr>
+				<th colspan="12" align="right">添加新用户</th>
+			</tr>
+			<tr>
+				<td align="right" width="35%">账号：</td>
+				<td><input type="text" name="account" /></td>
+			</tr>
+			<tr>
+				<td align="right">用户名：</td>
+				<td><input type="text" name="username" /></td>
+			</tr>
+			<tr>
+				<td align="right">密码：</td>
+				<td><input type="password" name="pwd" /></td>
+			</tr>
+			<tr>
+				<td align="right">确认密码：</td>
+				<td><input type="password" name="pwded" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="保存添加" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

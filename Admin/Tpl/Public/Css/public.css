@@ -1,0 +1,30 @@
+/* CSS全局样式 */
+html, body, ol, ul, li, p, a, img, dl, dt, dd, footer, header, table, th, td, p, iframe{margin: 0; padding: 0; }
+ul, ol, li{list-style: none; }
+a:link, a:visited{text-decoration: none;}
+body{font-family: '宋体'; font-size: 14px;background-color: #E9E8E8;}
+
+/* 表格样式 */
+.table{width: 100%; border-collapse: collapse;}
+.table th, .table, td{padding: 5px; vertical-align: middle; border: 1px solid #ecedef; }
+.tr_header{background-color: #ffc6ad;}     /* 标题行背景色 (第一行)*/
+.tr_even{background-color: #EBF8FF; }    /* 偶数行背景色 */
+.tr_odd{background-color: #DDECF3; }     /* 奇数行背景色 */
+.tr_hover{background-color: #FFC; }   	 /* 鼠标悬停背景色 */
+.tr_header>th{padding-right: 32px;}
+
+input[type="text"], input[type="password"]{padding: 3px; height: 100%; font-size: 14px; color: #6A6363; border: 1px solid #ccc;}
+input[type="text"]:hover, input[type="password"]:hover{border-color: #93BDE5;}
+input[type="submit"]{padding: 3px; width: 100px; background-color: #1e90ff; color: #F2EDED; border: none; cursor: pointer; }
+
+/* 按钮样式 */
+.btn1, .btn2, .btn3{display: inline-block; padding: 5px; width: 90px; color: #fff; border-radius: 5px; text-align: center; }
+.btn1{background-color: #07B311;} /* 绿色 */
+.btn2{background-color: #D563F0;} /* 紫色 */
+.btn3{background-color: #FC0505;} /* 红色 */
+.btn1:hover{background-color: #57e157;}
+.btn2:hover{background-color: #ff9cff;}
+.btn3:hover{background-color: #ff6868;}
+
+/* 固定宽度 */
+.len100{width: 100px;}
