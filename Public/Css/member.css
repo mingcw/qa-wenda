@@ -293,7 +293,10 @@
 #right .myinfo img{
     padding: 20px 100px;
 }
-#right .myinfo input{
+#right .myinfo .newFace{
+    position:relative;
+    top:6px;
+    margin-left: 48px;
     max-width: 200px;
     overflow: hidden;
 }
@@ -304,7 +307,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     color: white;
-    background-color: #41B80E;
+    background-color: #9c27b0;
 }
 #right .myinfo .upload-btn:hover{
     cursor: pointer;

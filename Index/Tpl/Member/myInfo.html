@@ -22,7 +22,7 @@
 			<div class="myinfo">
 				<p>
 					{$role}现在的头像：<span>{$msg}</span><br />
-					<img class='face-img' src="<if condition='$myFace'>__ROOT__/Uploads/Face/{$myFace}<else />__PUBLIC__/Images/noface.gif</if>" width="128" height="128" alt="{$role}的头像" />
+					<img class='face-img' src="<if condition='$myFace'>__ROOT__/Uploads/Face/{$myFace}<else />__PUBLIC__/Images/noface.jpg</if>" width="128" height="128" alt="{$role}的头像" />
 				</p>
 				<form action="{:U('Member/upload')}" enctype="multipart/form-data" method="post" name="upload">
 					<p>点击更换头像：<input type="file" name="face"  class="newFace" />

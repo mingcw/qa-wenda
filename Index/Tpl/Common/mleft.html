@@ -48,8 +48,8 @@
 		</li>
 		<if condition='isset($_SESSION[C("SESSION_PREFIX")]["uid"]) AND session("uid") eq $_GET["id"]'>
 			<li class='myInfo <if condition="ACTION_NAME eq 'myinfo'">cur</if>'>
-				<i class="fa fa-home"></i> 
-				<a href="{:U('Member/myInfo', array('id' => $_GET['id']))}">{$role}的头像</a>
+				<i class="fa fa-info"></i> 
+				<a href="{:U('Member/myInfo', array('id' => $_GET['id']))}">{$role}的资料</a>
 			</li>
 		</if>
 		<li style="background:none"></li>
