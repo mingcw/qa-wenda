@@ -11,7 +11,7 @@ class AskAction extends CommonAction {
 	public function index(){
 		$this->cate = M('category')->where(array('pid' => 0))->select();
 
-		if(isset(session('uid') && session('username')){
+		if(session('uid') && session('username')){
 			$this->point = M('user')->where(array('id' => session('uid')))->getField('point');
 		}
 		$this->display();
