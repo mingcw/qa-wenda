@@ -16,14 +16,12 @@
 	height: auto;
 	overflow: hidden;
 	border: 1px solid #E0E0E0;
-	background: url(../Images/list-title.png) repeat-x;
 }
 #cate-list .title {
 	width: 748px;
 	height: 40px;
 	line-height: 40px;
 	color: #888888;
-	background: url(../Images/point.png) no-repeat 13px 29px;
 	text-indent: 2em;
 	font-weight: bold;
 }
@@ -56,7 +54,6 @@
 	overflow: hidden;
 	border: 1px solid #E0E0E0;
 	margin-top: 10px;
-	background: url(../Images/answer-list.png) repeat-x;
 }
 #answer-list .ans-sel {
 	height: 34px;
@@ -129,4 +126,7 @@
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
+}
+.no-ask{
+	font-size: 16px;
 }

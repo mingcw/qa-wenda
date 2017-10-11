@@ -8,7 +8,7 @@
 				<li><a href="" class='login'>登录</a></li>
 				<li style='color:#eaeaf1'>|</li>
 				<li><a href="" class='register'>注册</a></li>
-			<else/>
+			<else />
 				<li class='userinfo'>
 					欢迎您，<i class="fa fa-user-circle"></i>
 					<a href="{:U('Member/index', array('id' => session('uid')))}" class='uname'>{$Think.session.username}</a>
@@ -23,8 +23,8 @@
 		<div class='logo'>
 			<a href="__APP__"><img src="__PUBLIC__/Images/logo.png" alt="{$Think.config.web_name}"></a>
 		</div>
-		<form action="" method=''>
-			<input type="text" name='' class='sech-cons' placeholder="有什么不懂的，你问吧~~">
+		<form action="{:U('Search/index')}" method='get'>
+			<input type="text" name='wd' value="{$wd|default=''}" class='sech-cons' placeholder="有什么不懂的，你问吧~~">
 			<button type="submit" class='sech-btn'><i class="fa fa-search"></i> 搜一搜</button>
 		</form>
 		<a href="{:U('Ask/index')}" class='ask-btn'><i class="fa fa-question"></i> 我要提问</a>
