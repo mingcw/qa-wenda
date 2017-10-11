@@ -833,3 +833,19 @@ a:hover,a:active,a:focus {
     margin-top: 20px;
     padding: 20px 0;
 }
+
+/********************分页********************/
+.page a, .current{
+    display:inline-block;
+    padding:0 6px;
+    margin:0 2px;
+    border:1px solid #e0e0e0;
+    background:#26b787;
+    color:#efefef;
+    letter-spacing:2px;
+}
+.page .current{
+    background: #efefef;
+    color:#333;
+
+}
