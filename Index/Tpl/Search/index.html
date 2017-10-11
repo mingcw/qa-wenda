@@ -1,0 +1,58 @@
+<include file='Common:header' />
+	<link rel="stylesheet" href="__PUBLIC__/Css/list.css" />
+</head>
+<body>
+	<include file='Common:top' />
+<!--------------------中部-------------------->
+	<div id='center'>
+		<div id='left'>
+			<div id='answer-list'>
+				<ul class='ans-sel'>
+					<li <if condition='$filter eq 0'>class="on"</if> >
+						<a href="{:U('index', array('wd' => urlencode($wd)))}">待解决问题</a>
+					</li>
+					<li <if condition='$filter eq 1'>class="on"</if> >
+						<a href="{:U('index', array('wd' => urlencode($wd), 'filter' => 1))}">已解决</a>
+					</li>
+					<li <if condition='$filter eq 2'>class="on"</if> >
+						<a href="{:U('index', array('wd' => urlencode($wd), 'filter' => 2))}">高悬赏</a>
+					</li>
+					<li <if condition='$filter eq 3'>class="on"</if> >
+						<a href="{:U('index', array('wd' => urlencode($wd), 'filter' => 3))}">零回答</a>
+					</li>
+				</ul>
+				<table>
+					<tr>
+						<th class='t1'>标题</th>
+						<th>回答数</th>
+						<th>时间</th>
+					</tr>
+					<foreach name='askList' item='v'>
+						<tr>
+							<td class='t1 cons'>
+								<i class="fa fa-quora"></i>
+								<a href="{:U('Show/index', array('id' => $v['id']))}">
+									<if condition='$v[reward] gt 0'><b><i class="fa fa-rmb"></i>{$v.reward}</b></if>
+									{$v.content}
+								</a>
+								<span class="cate">{$v.name}</span>
+							</td>
+							<td>{$v.answer}</td>
+							<td>{$v.time|time_formate=###}</td>
+						</tr>
+					</foreach>
+					<if condition="!$askList">
+						<tr>
+							<td colspan="3"><p class="no-ask">啊哦，好像姿势不对，没有有关"{$wd}"的问题(-_-||)</p></td>
+						</tr>
+					</if>
+					<tr class='page'>
+						<td colspan='3'>{$page}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<include file='Common:right' />
+	</div>
+<!--------------------内容主体结束-------------------->
+	<include file='Common:bottom' />
