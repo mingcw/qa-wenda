@@ -43,7 +43,7 @@ header .menu {
 header .menu a, header .exit a {
     padding: 10px;
     color: #fff;
-    background-color: #8b003d;
+    background-color: #430420;
     border-radius: 5px;
 }
 
@@ -52,7 +52,7 @@ header .exit a {
 }
 
 header .menu a:hover, header .exit a:hover {
-    background-color: #FF1493;
+    background-color: #1e90ff;
 }
 
 header .exit {
@@ -82,7 +82,7 @@ header .exit {
     padding: 5px;
     font-weight: bold;
     color: #efefef;
-    background-color: #8b003d;
+    background-color: #3e3e3e;
 }
 
 #nav dd {
@@ -91,7 +91,7 @@ header .exit {
 }
 
 #nav dd a {
-    color: #8b003d;
+    color: #430420;
 }
 
 #nav dd a:hover {
